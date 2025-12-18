@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: supersonic-demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/supersonic_demo?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.tencent.supersonic.demo.semantic.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# Mapper配置
+mapper:
+  detection:
+    size: 8
+    max-size: 20
+  name:
+    threshold: 0.3
+    threshold-min: 0.25
+  dimension-value:
+    size: 1
+  value:
+    threshold: 0.5
+    threshold-min: 0.3
+
+logging:
+  level:
+    com.tencent.supersonic.demo: DEBUG

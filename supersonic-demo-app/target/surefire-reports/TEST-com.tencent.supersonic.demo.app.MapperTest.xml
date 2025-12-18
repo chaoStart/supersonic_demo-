@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.tencent.supersonic.demo.app.MapperTest" time="4.992" tests="7" errors="0" skipped="0" failures="6">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\github_code\supersonic_demo\supersonic-demo-app\target\test-classes;D:\github_code\supersonic_demo\supersonic-demo-app\target\classes;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\tencent\supersonic\supersonic-common\1.0.0-SNAPSHOT\supersonic-common-1.0.0-SNAPSHOT.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-context\5.3.31\spring-context-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-aop\5.3.31\spring-aop-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-beans\5.3.31\spring-beans-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-expression\5.3.31\spring-expression-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\hankcs\hanlp\portable-1.8.4\hanlp-portable-1.8.4.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\tencent\supersonic\supersonic-semantic\1.0.0-SNAPSHOT\supersonic-semantic-1.0.0-SNAPSHOT.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter\2.7.18\spring-boot-starter-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot\2.7.18\spring-boot-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-logging\2.7.18\spring-boot-starter-logging-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\ch\qos\logback\logback-classic\1.2.12\logback-classic-1.2.12.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\ch\qos\logback\logback-core\1.2.12\logback-core-1.2.12.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\core\jackson-databind\2.13.5\jackson-databind-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.5\jackson-annotations-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\core\jackson-core\2.13.5\jackson-core-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\tencent\supersonic\supersonic-mapper\1.0.0-SNAPSHOT\supersonic-mapper-1.0.0-SNAPSHOT.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-web\2.7.18\spring-boot-starter-web-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-json\2.7.18\spring-boot-starter-json-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.13.5\jackson-datatype-jdk8-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.13.5\jackson-datatype-jsr310-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.13.5\jackson-module-parameter-names-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-tomcat\2.7.18\spring-boot-starter-tomcat-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.83\tomcat-embed-core-9.0.83.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.83\tomcat-embed-el-9.0.83.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.83\tomcat-embed-websocket-9.0.83.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-web\5.3.31\spring-web-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-webmvc\5.3.31\spring-webmvc-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus-boot-starter\3.5.3\mybatis-plus-boot-starter-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus\3.5.3\mybatis-plus-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus-extension\3.5.3\mybatis-plus-extension-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus-core\3.5.3\mybatis-plus-core-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus-annotation\3.5.3\mybatis-plus-annotation-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\github\jsqlparser\jsqlparser\4.4\jsqlparser-4.4.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\mybatis\mybatis\3.5.10\mybatis-3.5.10.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\mybatis\mybatis-spring\2.0.7\mybatis-spring-2.0.7.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.18\spring-boot-autoconfigure-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-jdbc\2.7.18\spring-boot-starter-jdbc-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-jdbc\5.3.31\spring-jdbc-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-tx\5.3.31\spring-tx-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-test\2.7.18\spring-boot-starter-test-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-test\2.7.18\spring-boot-test-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.7.18\spring-boot-test-autoconfigure-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\net\minidev\json-smart\2.4.11\json-smart-2.4.11.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\net\minidev\accessors-smart\2.4.11\accessors-smart-2.4.11.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\mockito\mockito-core\4.5.1\mockito-core-4.5.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\net\bytebuddy\byte-buddy\1.12.23\byte-buddy-1.12.23.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\net\bytebuddy\byte-buddy-agent\1.12.23\byte-buddy-agent-1.12.23.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\mockito\mockito-junit-jupiter\4.5.1\mockito-junit-jupiter-4.5.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-core\5.3.31\spring-core-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-jcl\5.3.31\spring-jcl-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-test\5.3.31\spring-test-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\h2database\h2\2.1.214\h2-2.1.214.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="D:\all_tool\java_cache\jdk-17.0.11_windows-x64_bin\jdk-17.0.11\bin"/>
+    <property name="sun.java.command" value="C:\Users\91752\AppData\Local\Temp\surefire6203269780157788399\surefirebooter-20251218095259882_3.jar C:\Users\91752\AppData\Local\Temp\surefire6203269780157788399 2025-12-18T09-52-59_647-jvmRun1 surefire-20251218095259882_1tmp surefire_0-20251218095259882_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\github_code\supersonic_demo\supersonic-demo-app\target\test-classes;D:\github_code\supersonic_demo\supersonic-demo-app\target\classes;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\tencent\supersonic\supersonic-common\1.0.0-SNAPSHOT\supersonic-common-1.0.0-SNAPSHOT.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-context\5.3.31\spring-context-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-aop\5.3.31\spring-aop-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-beans\5.3.31\spring-beans-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-expression\5.3.31\spring-expression-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\hankcs\hanlp\portable-1.8.4\hanlp-portable-1.8.4.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\tencent\supersonic\supersonic-semantic\1.0.0-SNAPSHOT\supersonic-semantic-1.0.0-SNAPSHOT.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter\2.7.18\spring-boot-starter-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot\2.7.18\spring-boot-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-logging\2.7.18\spring-boot-starter-logging-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\ch\qos\logback\logback-classic\1.2.12\logback-classic-1.2.12.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\ch\qos\logback\logback-core\1.2.12\logback-core-1.2.12.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\core\jackson-databind\2.13.5\jackson-databind-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.5\jackson-annotations-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\core\jackson-core\2.13.5\jackson-core-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\tencent\supersonic\supersonic-mapper\1.0.0-SNAPSHOT\supersonic-mapper-1.0.0-SNAPSHOT.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-web\2.7.18\spring-boot-starter-web-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-json\2.7.18\spring-boot-starter-json-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.13.5\jackson-datatype-jdk8-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.13.5\jackson-datatype-jsr310-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.13.5\jackson-module-parameter-names-2.13.5.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-tomcat\2.7.18\spring-boot-starter-tomcat-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.83\tomcat-embed-core-9.0.83.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.83\tomcat-embed-el-9.0.83.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.83\tomcat-embed-websocket-9.0.83.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-web\5.3.31\spring-web-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-webmvc\5.3.31\spring-webmvc-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus-boot-starter\3.5.3\mybatis-plus-boot-starter-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus\3.5.3\mybatis-plus-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus-extension\3.5.3\mybatis-plus-extension-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus-core\3.5.3\mybatis-plus-core-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\baomidou\mybatis-plus-annotation\3.5.3\mybatis-plus-annotation-3.5.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\github\jsqlparser\jsqlparser\4.4\jsqlparser-4.4.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\mybatis\mybatis\3.5.10\mybatis-3.5.10.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\mybatis\mybatis-spring\2.0.7\mybatis-spring-2.0.7.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.18\spring-boot-autoconfigure-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-jdbc\2.7.18\spring-boot-starter-jdbc-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-jdbc\5.3.31\spring-jdbc-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-tx\5.3.31\spring-tx-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-starter-test\2.7.18\spring-boot-starter-test-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-test\2.7.18\spring-boot-test-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.7.18\spring-boot-test-autoconfigure-2.7.18.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\net\minidev\json-smart\2.4.11\json-smart-2.4.11.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\net\minidev\accessors-smart\2.4.11\accessors-smart-2.4.11.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\mockito\mockito-core\4.5.1\mockito-core-4.5.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\net\bytebuddy\byte-buddy\1.12.23\byte-buddy-1.12.23.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\net\bytebuddy\byte-buddy-agent\1.12.23\byte-buddy-agent-1.12.23.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\mockito\mockito-junit-jupiter\4.5.1\mockito-junit-jupiter-4.5.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-core\5.3.31\spring-core-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-jcl\5.3.31\spring-jcl-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\springframework\spring-test\5.3.31\spring-test-5.3.31.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;D:\Maven\apache-maven-3.3.9\mvn-repo\repository\com\h2database\h2\2.1.214\h2-2.1.214.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\91752"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="D:\all_tool\java_cache\jdk-17.0.11_windows-x64_bin\jdk-17.0.11"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\github_code\supersonic_demo\supersonic-demo-app"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="GBK"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\91752\AppData\Local\Temp\surefire6203269780157788399\surefirebooter-20251218095259882_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.11+7-LTS-207"/>
+    <property name="user.name" value="91752"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="spring.beaninfo.ignore" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="D:\Maven\apache-maven-3.3.9\mvn-repo\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\91752\AppData\Local\Temp\"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="17.0.11"/>
+    <property name="user.dir" value="D:\github_code\supersonic_demo\supersonic-demo-app"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="26208"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="GBK"/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\all_tool\java_cache\jdk-17.0.11_windows-x64_bin\jdk-17.0.11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\91752\bin;D:\all_tool\git\Git\mingw64\bin;D:\all_tool\git\Git\usr\local\bin;D:\all_tool\git\Git\usr\bin;D:\all_tool\git\Git\usr\bin;D:\all_tool\git\Git\mingw64\bin;D:\all_tool\git\Git\usr\bin;C:\Users\91752\bin;D:\linux_system\VMware_cache\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;D:\all_tool\git\Git\cmd;D:\all_tool\go\go_installer\bin;C:\Program Files\Docker\Docker\resources\bin;D:\all_tool\nvm\nvm;C:\Program Files\nodejs;D:\all_tool\vscode\Microsoft VS Code\bin;D:\all_tool\java_cache\jdk-17.0.11_windows-x64_bin\jdk-17.0.11\bin;D:\all_tool\maven_cache\apache-maven-3.3.9\bin;C:\Users\91752\AppData\Local\Microsoft\WindowsApps;C:\Users\91752\AppData\Roaming\Programs\Zero Install;C:\Users\91752\AppData\Local\Microsoft\WindowsApps;C:\Users\91752\.local\bin;C:\Users\91752\go\bin;D:\all_tool\nvm\nvm;C:\Program Files\nodejs;D:\all_tool\idea\IntelliJ IDEA 2025.1.3\bin;D:\all_tool\git\Git\usr\bin\vendor_perl;D:\all_tool\git\Git\usr\bin\core_perl;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.11+7-LTS-207"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testDimensionMapping_ProductCategory" classname="com.tencent.supersonic.demo.app.MapperTest" time="0.698">
+    <failure message="应该匹配到商品类别维度 ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 应该匹配到商品类别维度 ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+	at com.tencent.supersonic.demo.app.MapperTest.testDimensionMapping_ProductCategory(MapperTest.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[09:53:00.603 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:53:00.611 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:53:00.636 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.tencent.supersonic.demo.app.MapperTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:53:00.647 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.tencent.supersonic.demo.app.MapperTest], using SpringBootContextLoader
+09:53:00.651 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.tencent.supersonic.demo.app.MapperTest]: class path resource [com/tencent/supersonic/demo/app/MapperTest-context.xml] does not exist
+09:53:00.651 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.tencent.supersonic.demo.app.MapperTest]: class path resource [com/tencent/supersonic/demo/app/MapperTestContext.groovy] does not exist
+09:53:00.651 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.tencent.supersonic.demo.app.MapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:53:00.653 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tencent.supersonic.demo.app.MapperTest]: MapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:53:00.695 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.tencent.supersonic.demo.app.MapperTest]
+09:53:00.751 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\github_code\supersonic_demo\supersonic-demo-app\target\classes\com\tencent\supersonic\demo\app\DemoApplication.class]
+09:53:00.755 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tencent.supersonic.demo.app.DemoApplication for test class com.tencent.supersonic.demo.app.MapperTest
+09:53:00.845 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.tencent.supersonic.demo.app.MapperTest]: using defaults.
+09:53:00.845 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:53:00.864 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6436a7db, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@460ebd80, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6f3c660a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@74f5ce22, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@25aca718, org.springframework.test.context.support.DirtiesContextTestExecutionListener@16fdec90, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1afdd473, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@40238dd0, org.springframework.test.context.event.EventPublishingTestExecutionListener@7776ab, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@79179359, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@dbd8e44, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@51acdf2e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6a55299e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f1de2d6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4eb386df]
+09:53:00.866 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@525575 testClass = MapperTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@46dffdc3 testClass = MapperTest, locations = '{}', classes = '{class com.tencent.supersonic.demo.app.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@8f2ef19, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@173ed316, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@19e4653c, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@33065d67, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5b218417, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6483f5ae], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2025-12-18 09:53:01.221  INFO 26208 --- [           main] c.t.supersonic.demo.app.MapperTest       : Starting MapperTest using Java 17.0.11 on 揍你 with PID 26208 (started by 91752 in D:\github_code\supersonic_demo\supersonic-demo-app)
+2025-12-18 09:53:01.222 DEBUG 26208 --- [           main] c.t.supersonic.demo.app.MapperTest       : Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-12-18 09:53:01.222  INFO 26208 --- [           main] c.t.supersonic.demo.app.MapperTest       : No active profile set, falling back to 1 default profile: "default"
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Property 'mapperLocations' was not specified.
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.3 
+2025-12-18 09:53:04.214  INFO 26208 --- [           main] c.t.supersonic.demo.app.MapperTest       : Started MapperTest in 3.295 seconds (JVM running for 4.206)
+2025-12-18 09:53:04.218  INFO 26208 --- [           main] c.t.s.d.a.c.MapperDemoController         : Reloading knowledge base...
+2025-12-18 09:53:04.218  INFO 26208 --- [           main] c.t.s.d.m.k.KnowledgeBaseService         : Clearing knowledge base...
+2025-12-18 09:53:04.220  INFO 26208 --- [           main] c.t.s.d.s.s.i.SemanticSchemaServiceImpl  : 开始加载语义Schema...
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6da54910] was not registered for synchronization because synchronization is not active
+2025-12-18 09:53:04.328  WARN 26208 --- [           main] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @396e2f39
+2025-12-18 09:53:04.349  INFO 26208 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-18 09:53:04.571  INFO 26208 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@1167607380 wrapping com.mysql.cj.jdbc.ConnectionImpl@4c5406b] will not be managed by Spring
+==>  Preparing: SELECT id,name,biz_name,description,status,alias,model_ids,dimension_ids,metric_ids,created_at,created_by,updated_at,updated_by FROM s2_data_set WHERE (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: id, name, biz_name, description, status, alias, model_ids, dimension_ids, metric_ids, created_at, created_by, updated_at, updated_by
+<==        Row: 1, 鐢靛晢缁煎悎鍒嗘瀽, e_commerce_analysis, 鐢靛晢涓氬姟缁煎悎鍒嗘瀽鏁版嵁闆�, 1, 鐢靛晢鍒嗘瀽,閿�鍞垎鏋�,涓氬姟鍒嗘瀽, 1,2, 1,2,3,4,5,6,7,8, 1,2,3,4,5,6,7,8, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6da54910]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@227a933d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@635340952 wrapping com.mysql.cj.jdbc.ConnectionImpl@4c5406b] will not be managed by Spring
+==>  Preparing: SELECT id,name,biz_name,description,status,created_at,created_by,updated_at,updated_by FROM s2_model WHERE (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: id, name, biz_name, description, status, created_at, created_by, updated_at, updated_by
+<==        Row: 1, 璁㈠崟妯″瀷, order_model, 鐢靛晢璁㈠崟鏁版嵁妯″瀷, 1, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 2, 鐢ㄦ埛妯″瀷, user_model, 鐢ㄦ埛鍒嗘瀽鏁版嵁妯″瀷, 1, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@227a933d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d3bf8db] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1239935217 wrapping com.mysql.cj.jdbc.ConnectionImpl@4c5406b] will not be managed by Spring
+==>  Preparing: SELECT id,model_id,name,biz_name,description,status,type,alias,created_at,created_by,updated_at,updated_by FROM s2_dimension WHERE (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: id, model_id, name, biz_name, description, status, type, alias, created_at, created_by, updated_at, updated_by
+<==        Row: 1, 1, 鍟嗗搧鍚嶇О, product_name, 鍟嗗搧鐨勫悕绉�, 1, categorical, 浜у搧鍚�,浜у搧鍚嶇О,鍟嗗搧, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 2, 1, 鍟嗗搧绫诲埆, product_category, 鍟嗗搧鎵�灞炵被鍒�, 1, categorical, 绫诲埆,鍒嗙被,鍝佺被, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 3, 1, 璁㈠崟鏃ユ湡, order_date, 璁㈠崟鍒涘缓鏃ユ湡, 1, partition_time, 鏃ユ湡,鏃堕棿,涓嬪崟鏃ユ湡, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 4, 1, 璁㈠崟鐘舵��, order_status, 璁㈠崟褰撳墠鐘舵��, 1, categorical, 鐘舵��, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 5, 2, 鐢ㄦ埛鍚�, user_name, 鐢ㄦ埛鍚嶇О, 1, categorical, 濮撳悕,鍚嶅瓧,瀹㈡埛鍚�, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 6, 2, 鐢ㄦ埛鍩庡競, user_city, 鐢ㄦ埛鎵�鍦ㄥ煄甯�, 1, categorical, 鍩庡競,鍦板尯,鎵�鍦ㄥ湴, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 7, 2, 鐢ㄦ埛绛夌骇, user_level, 鐢ㄦ埛浼氬憳绛夌骇, 1, categorical, 绛夌骇,浼氬憳绛夌骇,VIP绛夌骇, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 8, 2, 娉ㄥ唽鏃ユ湡, register_date, 鐢ㄦ埛娉ㄥ唽鏃ユ湡, 1, time, 娉ㄥ唽鏃堕棿, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==      Total: 8
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d3bf8db]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@334540a0] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1534265514 wrapping com.mysql.cj.jdbc.ConnectionImpl@4c5406b] will not be managed by Spring
+==>  Preparing: SELECT id,model_id,name,biz_name,description,status,type,alias,default_agg,created_at,created_by,updated_at,updated_by FROM s2_metric WHERE (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: id, model_id, name, biz_name, description, status, type, alias, default_agg, created_at, created_by, updated_at, updated_by
+<==        Row: 1, 1, 閿�鍞, sales_amount, 鍟嗗搧閿�鍞�婚噾棰�, 1, ATOMIC, 閿�鍞噾棰�,閿�鍞�婚,钀ユ敹,鏀跺叆, SUM, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 2, 1, 璁㈠崟閲�, order_count, 璁㈠崟鏁伴噺, 1, ATOMIC, 璁㈠崟鏁�,鎴愪氦閲�,璁㈠崟鎬绘暟, COUNT, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 3, 1, 瀹㈠崟浠�, avg_order_amount, 骞冲潎璁㈠崟閲戦, 1, DERIVED, 骞冲潎娑堣垂,鍗曞潎,鍧囦环, AVG, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 4, 1, 閫�娆鹃噾棰�, refund_amount, 閫�娆炬�婚噾棰�, 1, ATOMIC, 閫�娆鹃,閫�娆�, SUM, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 5, 2, 鐢ㄦ埛鏁�, user_count, 鐢ㄦ埛鎬绘暟, 1, ATOMIC, 鐢ㄦ埛閲�,浜烘暟,瀹㈡埛鏁�, COUNT, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 6, 2, 娲昏穬鐢ㄦ埛鏁�, active_user_count, 娲昏穬鐢ㄦ埛鏁伴噺, 1, ATOMIC, 娲昏穬鐢ㄦ埛,娲昏穬浜烘暟,DAU, COUNT, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 7, 2, 鏂板鐢ㄦ埛鏁�, new_user_count, 鏂版敞鍐岀敤鎴锋暟, 1, ATOMIC, 鏂扮敤鎴�,鏂板鐢ㄦ埛,鏂板, COUNT, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==        Row: 8, 1, 鍟嗗搧鏁伴噺, product_count, 閿�鍞殑鍟嗗搧鏁伴噺, 1, ATOMIC, 鍟嗗搧鏁�,浜у搧鏁�, SUM, 2025-12-18 01:45:25, admin, 2025-12-18 01:45:25, admin
+<==      Total: 8
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@334540a0]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1934339] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1257319011 wrapping com.mysql.cj.jdbc.ConnectionImpl@4c5406b] will not be managed by Spring
+==>  Preparing: SELECT id,dimension_id,value,alias,frequency,created_at FROM s2_dimension_value
+==> Parameters: 
+<==    Columns: id, dimension_id, value, alias, frequency, created_at
+<==        Row: 19, 2, 鎵嬫満, 鏅鸿兘鎵嬫満,绉诲姩鐢佃瘽,鎵嬫満鏁扮爜, 100000, 2025-12-18 01:45:25
+<==        Row: 20, 2, 鐢佃剳, 绗旇鏈�,鍙板紡鏈�,鐢佃剳鏁扮爜, 100000, 2025-12-18 01:45:25
+<==        Row: 21, 2, 鏈嶈, 琛ｆ湇,鏈嶉グ,绌挎埓, 100000, 2025-12-18 01:45:25
+<==        Row: 22, 2, 瀹剁數, 瀹剁敤鐢靛櫒,鐢靛櫒, 100000, 2025-12-18 01:45:25
+<==        Row: 23, 2, 椋熷搧, 闆堕,椋熺墿,鍚冪殑, 100000, 2025-12-18 01:45:25
+<==        Row: 24, 4, 宸插畬鎴�, 瀹屾垚,宸茬粨鏉�, 100000, 2025-12-18 01:45:25
+<==        Row: 25, 4, 寰呭彂璐�, 绛夊緟鍙戣揣,鏈彂璐�, 100000, 2025-12-18 01:45:25
+<==        Row: 26, 4, 宸插彇娑�, 鍙栨秷,宸叉挙閿�, 100000, 2025-12-18 01:45:25
+<==        Row: 27, 4, 閫�娆句腑, 閫�娆�,鐢宠閫�娆�, 100000, 2025-12-18 01:45:25
+<==        Row: 28, 6, 鍖椾含, 棣栭兘,BJ,鍖椾含甯�, 100000, 2025-12-18 01:45:25
+<==        Row: 29, 6, 涓婃捣, SH,榄旈兘,涓婃捣甯�, 100000, 2025-12-18 01:45:25
+<==        Row: 30, 6, 娣卞湷, SZ,楣忓煄,娣卞湷甯�, 100000, 2025-12-18 01:45:25
+<==        Row: 31, 6, 骞垮窞, GZ,缇婂煄,骞垮窞甯�, 100000, 2025-12-18 01:45:25
+<==        Row: 32, 6, 鏉窞, HZ,鏉窞甯�, 100000, 2025-12-18 01:45:25
+<==        Row: 33, 7, 鏅�氫細鍛�, 鏅��,鏅�氱敤鎴�, 100000, 2025-12-18 01:45:25
+<==        Row: 34, 7, VIP浼氬憳, VIP,璐靛, 100000, 2025-12-18 01:45:25
+<==        Row: 35, 7, 榛勯噾浼氬憳, 榛勯噾,閲戠墝, 100000, 2025-12-18 01:45:25
+<==        Row: 36, 7, 閽荤煶浼氬憳, 閽荤煶,鑷冲皧, 100000, 2025-12-18 01:45:25
+<==      Total: 18
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1934339]
+2025-12-18 09:53:04.750  INFO 26208 --- [           main] c.t.s.d.s.s.i.SemanticSchemaServiceImpl  : 语义Schema加载完成，共1个数据集
+2025-12-18 09:53:04.758  INFO 26208 --- [           main] c.t.s.d.m.k.KnowledgeBaseService         : Updated knowledge base with 28 words
+2025-12-18 09:53:04.762  INFO 26208 --- [           main] c.t.s.d.m.k.KnowledgeBaseService         : Updated knowledge base with 31 words
+2025-12-18 09:53:04.765  INFO 26208 --- [           main] c.t.s.d.m.k.KnowledgeBaseService         : Updated knowledge base with 62 words
+2025-12-18 09:53:04.766  INFO 26208 --- [           main] c.t.s.d.a.c.MapperDemoController         : Knowledge base reloaded: 28 dimensions, 31 metrics, 62 values
+2025-12-18 09:53:05.289 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : before KeywordMapper, mapInfo:{}
+2025-12-18 09:53:05.463 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : after KeywordMapper, cost:174, mapInfo:{}
+]]></system-out>
+  </testcase>
+  <testcase name="testAliasMapping" classname="com.tencent.supersonic.demo.app.MapperTest" time="0.006">
+    <failure message="产品名应该匹配到商品名称（通过别名） ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 产品名应该匹配到商品名称（通过别名） ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+	at com.tencent.supersonic.demo.app.MapperTest.testAliasMapping(MapperTest.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[2025-12-18 09:53:05.492 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : before KeywordMapper, mapInfo:{}
+2025-12-18 09:53:05.492 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : after KeywordMapper, cost:0, mapInfo:{}
+]]></system-out>
+  </testcase>
+  <testcase name="testMetricAliasMapping" classname="com.tencent.supersonic.demo.app.MapperTest" time="0.005">
+    <failure message="营收应该匹配到销售额（通过别名） ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 营收应该匹配到销售额（通过别名） ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+	at com.tencent.supersonic.demo.app.MapperTest.testMetricAliasMapping(MapperTest.java:147)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[2025-12-18 09:53:05.499 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : before KeywordMapper, mapInfo:{}
+2025-12-18 09:53:05.499 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : after KeywordMapper, cost:0, mapInfo:{}
+]]></system-out>
+  </testcase>
+  <testcase name="testMultiElementMapping" classname="com.tencent.supersonic.demo.app.MapperTest" time="0.003">
+    <failure message="应该匹配到用户数指标 ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 应该匹配到用户数指标 ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+	at com.tencent.supersonic.demo.app.MapperTest.testMultiElementMapping(MapperTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[2025-12-18 09:53:05.507 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : before KeywordMapper, mapInfo:{}
+2025-12-18 09:53:05.507 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : after KeywordMapper, cost:0, mapInfo:{}
+]]></system-out>
+  </testcase>
+  <testcase name="testComplexQuery" classname="com.tencent.supersonic.demo.app.MapperTest" time="0.003">
+    <failure message="应该匹配到销售额指标 ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 应该匹配到销售额指标 ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+	at com.tencent.supersonic.demo.app.MapperTest.testComplexQuery(MapperTest.java:169)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[2025-12-18 09:53:05.513 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : before KeywordMapper, mapInfo:{}
+2025-12-18 09:53:05.513 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : after KeywordMapper, cost:0, mapInfo:{}
+]]></system-out>
+  </testcase>
+  <testcase name="testSchemaLoading" classname="com.tencent.supersonic.demo.app.MapperTest" time="0.007">
+    <system-out><![CDATA[=== Schema加载测试 ===
+数据集数量: 1
+维度数量: 8
+指标数量: 8
+维度值数量: 18
+]]></system-out>
+  </testcase>
+  <testcase name="testMetricMapping_SalesAmount" classname="com.tencent.supersonic.demo.app.MapperTest" time="0.005">
+    <failure message="映射结果不应为空 ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 映射结果不应为空 ==> expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:40)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:235)
+	at com.tencent.supersonic.demo.app.MapperTest.testMetricMapping_SalesAmount(MapperTest.java:56)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[2025-12-18 09:53:05.531 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : before KeywordMapper, mapInfo:{}
+2025-12-18 09:53:05.531 DEBUG 26208 --- [           main] c.t.supersonic.demo.mapper.BaseMapper    : after KeywordMapper, cost:0, mapInfo:{}
+]]></system-out>
+  </testcase>
+</testsuite>

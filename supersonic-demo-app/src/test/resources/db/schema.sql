@@ -1,0 +1,77 @@
+-- SuperSonic Demo 数据库表结构
+
+-- 模型表
+CREATE TABLE IF NOT EXISTS s2_model (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL COMMENT '模型名称',
+    biz_name VARCHAR(255) NOT NULL COMMENT '业务名称',
+    description VARCHAR(500) COMMENT '描述',
+    status TINYINT NOT NULL DEFAULT 1 COMMENT '状态:0-禁用,1-启用',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_by VARCHAR(100),
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    updated_by VARCHAR(100)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='模型表';
+
+-- 维度表
+CREATE TABLE IF NOT EXISTS s2_dimension (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    model_id BIGINT NOT NULL COMMENT '模型ID',
+    name VARCHAR(255) NOT NULL COMMENT '维度中文名',
+    biz_name VARCHAR(255) NOT NULL COMMENT '字段名',
+    description VARCHAR(500) COMMENT '描述',
+    status TINYINT NOT NULL DEFAULT 1 COMMENT '状态',
+    type VARCHAR(50) NOT NULL DEFAULT 'categorical' COMMENT '维度类型:categorical,time,partition_time',
+    alias VARCHAR(500) COMMENT '别名,逗号分隔',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_by VARCHAR(100),
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    updated_by VARCHAR(100),
+    INDEX idx_model_id (model_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='维度表';
+
+-- 指标表
+CREATE TABLE IF NOT EXISTS s2_metric (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    model_id BIGINT NOT NULL COMMENT '模型ID',
+    name VARCHAR(255) NOT NULL COMMENT '指标中文名',
+    biz_name VARCHAR(255) NOT NULL COMMENT '字段名',
+    description VARCHAR(500) COMMENT '描述',
+    status TINYINT NOT NULL DEFAULT 1 COMMENT '状态',
+    type VARCHAR(50) NOT NULL DEFAULT 'ATOMIC' COMMENT '指标类型:ATOMIC,DERIVED',
+    alias VARCHAR(500) COMMENT '别名,逗号分隔',
+    default_agg VARCHAR(50) DEFAULT 'SUM' COMMENT '默认聚合函数',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_by VARCHAR(100),
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    updated_by VARCHAR(100),
+    INDEX idx_model_id (model_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='指标表';
+
+-- 数据集表
+CREATE TABLE IF NOT EXISTS s2_data_set (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL COMMENT '数据集名称',
+    biz_name VARCHAR(255) NOT NULL COMMENT '业务名称',
+    description VARCHAR(500) COMMENT '描述',
+    status TINYINT NOT NULL DEFAULT 1 COMMENT '状态',
+    alias VARCHAR(500) COMMENT '别名',
+    model_ids VARCHAR(500) NOT NULL COMMENT '关联模型ID,逗号分隔',
+    dimension_ids VARCHAR(2000) COMMENT '维度ID列表',
+    metric_ids VARCHAR(2000) COMMENT '指标ID列表',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_by VARCHAR(100),
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    updated_by VARCHAR(100)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='数据集表';
+
+-- 维度值表
+CREATE TABLE IF NOT EXISTS s2_dimension_value (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    dimension_id BIGINT NOT NULL COMMENT '维度ID',
+    value VARCHAR(500) NOT NULL COMMENT '维度值',
+    alias VARCHAR(500) COMMENT '别名',
+    frequency INT DEFAULT 100000 COMMENT '频率权重',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_dimension_id (dimension_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='维度值表';

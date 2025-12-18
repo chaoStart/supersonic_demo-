@@ -1,0 +1,7 @@
+com\tencent\supersonic\demo\app\controller\MapperDemoController$MatchResult.class
+com\tencent\supersonic\demo\app\controller\MapperDemoController$MapRequest.class
+com\tencent\supersonic\demo\app\controller\MapperDemoController$MapResponse.class
+com\tencent\supersonic\demo\app\DemoApplication.class
+com\tencent\supersonic\demo\app\controller\MapperDemoController$SchemaResponse.class
+com\tencent\supersonic\demo\app\controller\MapperDemoController.class
+com\tencent\supersonic\demo\app\controller\MapperDemoController$MatchResult$MatchResultBuilder.class
