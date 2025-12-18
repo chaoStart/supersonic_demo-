@@ -153,8 +153,6 @@ public class KeywordMapper extends BaseMapper {
     private List<DatabaseMapResult> databaseMatch(ChatQueryContext chatQueryContext) {
         String queryText = chatQueryContext.getRequest().getQueryText().toLowerCase();
         Set<Long> dataSetIds = chatQueryContext.getRequest().getDataSetIds();
-        MapperConfig config = ContextUtils.getBean(MapperConfig.class);
-        double threshold = config.getMapperNameThreshold();
 
         List<DatabaseMapResult> results = new java.util.ArrayList<>();
 
@@ -172,18 +170,21 @@ public class KeywordMapper extends BaseMapper {
 
         // 对每个元素进行匹配
         for (SchemaElement element : allElements) {
-            // 匹配名称
-            double similarity = EditDistanceUtils.getSimilarity(queryText, element.getName().toLowerCase());
-            if (similarity >= threshold && queryText.contains(element.getName().toLowerCase())) {
-                results.add(new DatabaseMapResult(element.getName(), element.getName(), element, similarity));
+            String elementName = element.getName().toLowerCase();
+
+            // 精确子串匹配 - 如果查询文本包含元素名称，直接匹配成功
+            if (queryText.contains(elementName)) {
+                results.add(new DatabaseMapResult(element.getName(), element.getName(), element, 1.0));
+                continue;  // 已匹配，跳过别名检查
             }
 
             // 匹配别名
             if (element.getAlias() != null) {
                 for (String alias : element.getAlias()) {
-                    similarity = EditDistanceUtils.getSimilarity(queryText, alias.toLowerCase());
-                    if (similarity >= threshold && queryText.contains(alias.toLowerCase())) {
-                        results.add(new DatabaseMapResult(alias, alias, element, similarity));
+                    String aliasLower = alias.toLowerCase();
+                    if (queryText.contains(aliasLower)) {
+                        results.add(new DatabaseMapResult(alias, alias, element, 1.0));
+                        break;  // 已匹配，跳过其他别名
                     }
                 }
             }
