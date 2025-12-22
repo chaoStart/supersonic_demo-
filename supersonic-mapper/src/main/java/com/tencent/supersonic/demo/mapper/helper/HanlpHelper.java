@@ -29,6 +29,7 @@ public class HanlpHelper {
     private static final Pattern PATTERN = Pattern.compile("[\u4e00-\u9fa5]");
     private static final int TERM_FREQUENCY = 1000;
     private static Segment segment;
+    private static CustomDictionary dictionary;
 
     static {
         // 初始化分词器
