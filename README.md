@@ -1,4 +1,4 @@
-# CustomGenerateSQL字段提取和语义建模演示项目
+# CustomGenerateSQL   字段提取和语义建模演示项目
 
 本项目从 [SuperSonic](https://github.com/tencentmusic/supersonic) 项目中抽取核心的**语义建模**和**字段提取（Mapper映射）**功能，在没有大模型时提供独立可运行的根据自然语言生成SQL的Demo示例。
 
