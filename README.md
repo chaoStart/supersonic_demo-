@@ -1,6 +1,6 @@
-# SuperSonic Demo - 字段提取和语义建模演示项目
+# CustomGenerateSQL字段提取和语义建模演示项目
 
-本项目从 [SuperSonic](https://github.com/tencentmusic/supersonic) 项目中抽取核心的**语义建模**和**字段提取（Mapper映射）**功能，提供独立可运行的演示代码。
+本项目从 [SuperSonic](https://github.com/tencentmusic/supersonic) 项目中抽取核心的**语义建模**和**字段提取（Mapper映射）**功能，在没有大模型时提供独立可运行的根据自然语言生成SQL的Demo示例。
 
 ## 项目简介
 
@@ -223,4 +223,4 @@ mapper:
 
 ## License
 
-本项目基于 SuperSonic 项目代码抽取，仅供学习和演示使用。
+本项目基于 SuperSonic 项目代码进一步完善根据自然语言生成标准SQL语句的Demo，仅供学习和演示使用。
