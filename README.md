@@ -12,7 +12,7 @@ SuperSonic 是一个融合 Chat BI 和 Headless BI 的新一代 BI 平台。本 
 ## 项目结构
 
 ```
-supersonic_demo/
+CustomGenerateSQL/
 ├── pom.xml                        # Maven父项目
 ├── README.md                      # 项目说明
 ├── supersonic-common/             # 通用工具模块
@@ -48,7 +48,7 @@ docker exec mysql mysql -u root -p123456 -e "CREATE DATABASE IF NOT EXISTS super
 ### 2. 编译项目
 
 ```bash
-cd supersonic_demo
+cd CustomGenerateSQL
 mvn clean install -DskipTests
 ```
 
