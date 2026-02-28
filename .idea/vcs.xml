@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/supersonic-mapper/src/main/java/com/tencent/supersonic/demo/mapper/TimeExtractor" vcs="Git" />
   </component>
 </project>
